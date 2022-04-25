@@ -28,7 +28,7 @@ func main() {
     a, b := swap("hello", "world")
 	fmt.Println(a, b)
     fmt.Println(split(17))
-    var i int
+    var i, j int = 1, 2
 	fmt.Println(i, c, python, java)
 }
 
