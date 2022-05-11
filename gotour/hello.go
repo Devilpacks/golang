@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/cmplx"
 	"math"
 )
 
@@ -21,6 +22,12 @@ func split(sum int) (x, y int) {
 
 var c, python, java bool
 
+var (
+	ToBe   bool       = false
+	MaxInt uint64     = 1<<64 - 1
+	z      complex128 = cmplx.Sqrt(-5 + 12i)
+)
+
 func main() {
     fmt.Println("Hello, World! \n")
     fmt.Println(math.Pi)
@@ -30,6 +37,9 @@ func main() {
     fmt.Println(split(17))
     var i, j int = 1, 2
 	fmt.Println(i, j, c, python, java)
+	fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe)
+	fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
+	fmt.Printf("Type: %T Value: %v\n", z, z)
 }
 
 
