@@ -28,6 +28,25 @@ var (
 	z      complex128 = cmplx.Sqrt(-5 + 12i)
 )
 
+func zeroValues() {
+	// 	0 for numeric types,
+	// false for the boolean type, and
+	// "" (the empty string) for strings.
+	var i int
+	var f float64
+	var b bool
+	var s string
+	fmt.Printf("%v %v %v %q\n", i, f, b, s)
+}
+
+func typeConversions() {
+	// The expression T(v) converts the value v to the type T.
+	var x, y int = 3, 4
+	var f float64 = math.Sqrt(float64(x*x + y*y))
+	var z uint = uint(f)
+	fmt.Println(x, y, z)
+}
+
 func main() {
     fmt.Println("Hello, World! \n")
     fmt.Println(math.Pi)
@@ -40,6 +59,9 @@ func main() {
 	fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe)
 	fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
 	fmt.Printf("Type: %T Value: %v\n", z, z)
+	zeroValues()
+	shortAssignment()
+	typeConversions()
 }
 
 
@@ -49,6 +71,7 @@ func shortAssignment() {
 	var i, j int = 1, 2
 	k := 3
 	c, python, java := true, false, "nooooooooooooooooo!"
-
 	fmt.Println(i, j, k, c, python, java)
 }
+
+
